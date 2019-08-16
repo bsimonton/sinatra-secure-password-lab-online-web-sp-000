@@ -43,7 +43,7 @@ class ApplicationController < Sinatra::Base
    post "/login" do
     ##your code here
     
-    
+    if params[:username] == "" || params[:password] == ""
     
     user = User.find_by(:username => params[:username])
     
